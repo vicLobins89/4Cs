@@ -1,0 +1,126 @@
+/******************************************************************
+Site Name: MTB
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+	font-size: 100%;
+}
+
+.pt-page {
+	&.title-card {
+		h2 {
+			font-size: 8rem;
+			font-size: 13vh;
+			margin-bottom: 11vh;
+			
+			&:after {
+				bottom: -6vh;
+			}
+		}
+		
+		p {
+			font-size: 2.15rem;
+			font-size: 3.7vh;
+			margin-bottom: 4vh;
+		}
+		
+		.icon {
+			margin: 6vh auto;
+		}
+		
+		&.more {
+			h2 {
+				font-size: 27vh;
+				line-height: 13vh;
+			}
+		}
+		
+		&.icons {
+			h2 {
+				font-size: 14vh;
+				line-height: 9vh;
+			}
+			
+			.stats {
+				li {
+					width: 25%;
+				}
+			}
+		}
+		
+		&.footer {
+			p {
+				width: 60%;
+			}
+			
+			&:last-child {
+				&:before {
+    				background-size: 8%;
+				}
+			}
+		}
+	}
+	
+	&.stats-card {
+		h2 {
+			font-size: 3rem;
+			margin: 3rem;
+
+			&:after {
+				width: 8rem;
+				height: 2px;
+			}
+		}
+		
+		h3 {
+			font-size: 13vh;
+		}
+	}
+}
+
+.stats {
+	li {
+		width: 50%;
+		margin: 7vh 0;
+	}
+}
+
+.photo-panel {
+	height: 100%;
+	background-attachment: fixed;
+	
+	&.fixed {
+		position: absolute;
+	}
+	
+	h2 {
+		font-size: 3rem;
+		margin: 3rem;
+		
+		&:after {
+			width: 8rem;
+			height: 2px;
+		}
+	}
+}
+
+.yellow-box {
+	width: auto;
+	min-height: unset;
+	left: 3rem;
+	bottom: 3rem;
+	padding: 1.5rem 2rem;
+	
+	p {
+		font-size: 1.2rem;
+	}
+}
