@@ -16,6 +16,10 @@ html {
 }
 
 .pt-page {
+	&.video {
+		background-image: url(../images/more-value-l.gif);
+	}
+	
 	&.title-card {
 		h2 {
 			font-size: 8rem;

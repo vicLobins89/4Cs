@@ -15,6 +15,24 @@ body {
 	font-size: 100%;
 }
 
+.pt-page {
+	&.video {
+		background-image: none;
+		
+		video {
+			display: block;
+			position: absolute;
+			width: auto;
+			height: 100%;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			z-index: 1;
+		}
+	}
+}
+
 /*********************
 HEADER STYLES
 *********************/

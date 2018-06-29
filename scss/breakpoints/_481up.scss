@@ -14,3 +14,9 @@ GENERAL STYLES
 html {
 	font-size: 96%;
 }
+
+.pt-page {
+	&.video {
+		background-image: url(../images/more-value-m.gif);
+	}
+}
