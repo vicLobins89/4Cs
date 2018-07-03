@@ -31,6 +31,34 @@ body {
 			z-index: 1;
 		}
 	}
+	
+	&.title-card {
+		&.icons {
+			.stats {
+				li {
+					width: 25%;
+				}
+			}
+		}
+		
+		&.footer {
+			&:last-child {
+				&:before {
+					background-size: 25%;
+				}
+			}
+		}
+	}
+	
+	&.coherence-2 .photo-panel {
+		background-color: #00398e;
+		background-position: 200% center;
+	}
+	
+	&.commerciality-2 .photo-panel {
+		background-color: #c6c6c7;
+		background-position: -100% center;
+	}
 }
 
 /*********************

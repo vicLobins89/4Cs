@@ -30,21 +30,24 @@ body {
 	padding: 0;
 	
 	&.ios-chrome {
+		
 		.photo-panel.fixed {
 			position: relative !important;
 		}
 		
 		.pt-page {
+			min-height: 600px;
+			
 			h2 {
-				font-size: 6.25vh;
+				font-size: 2rem;
 			}
 			
 			&.video {
-				height: 100vh;
+				height: 100%;
 
 				h1 {
-					font-size: 11vh;
-					line-height: 5vh;
+					font-size: 5.7rem;
+					line-height: 3rem;
 				}
 			}
 			
@@ -70,52 +73,52 @@ body {
 
 				&.more { // AMENDS!
 					h2 {
-						font-size: 20vh;
-						line-height: 10vh;
-						margin-top: 11vh;
+						font-size: 9rem;
+						line-height: 5rem;
+						margin-top: 5rem;
 					}
 				}
 
 				&.icons {
 					h2 {
-						font-size: 9vh;
-						line-height: 7vh;
+						font-size: 5rem;
+						line-height: 4rem;
 					}
 
 					h4 {
-						font-size: 5vh;
+						font-size: 2rem;
 					}
 
 				}
 
 				&.footer {
-					padding-top: 11vh;
+					padding-top: 7rem;
 
 					h2 {
-						font-size: 15vh;
-						margin-top: 11vh;
+						font-size: 7rem;
+						margin-top: 6rem;
 
 						&:after {
-							top: -6vh;
+							top: -3rem;
 						}
 					}
 
 					p {
-						margin-bottom: 6vh;
+						margin-bottom: 3rem;
 					}
 				}
 			}
 
 			&.stats-card {
 				h3 {
-					font-size: 10vh;
+					font-size: 5rem;
 				}
 			}
 		}
 		
 		.stats {
 			li {
-				margin: 3vh 0;
+				margin: 1rem 0;
 			}
 		}
 	}
@@ -278,7 +281,7 @@ img {
 			height: 70px;
 			height: 11vh;
 			margin: 2rem auto 2rem;
-			margin: 4vh auto 4vh;
+			margin: 4vh auto 3vh;
 			right: -50px;
 			opacity: 0;
 			transform: rotate(180deg);
@@ -301,7 +304,7 @@ img {
 			text-align: center;
 			line-height: 0.75;
 			margin-bottom: 3rem;
-			margin-bottom: 6vh;
+			margin-bottom: 8vh;
 			
 			span {
 				display: block;
@@ -319,7 +322,7 @@ img {
 				height: 1px;
 				background: $yellow;
 				bottom: -1.6rem;
-				bottom: -3vh;
+				bottom: -4vh;
 				left: 50%;
 				margin-left: -2rem;
 			}
@@ -369,7 +372,7 @@ img {
 				font-weight: bold;
 				letter-spacing: 0;
 				color: $yellow;
-				margin-top: 11vh;
+				margin-top: 5vh;
 				
 				span {
 					color: $white;
@@ -381,20 +384,43 @@ img {
 					}
 				}
 			}
+			
+			&.icons h2 {
+				margin-bottom: 4vh;
+				
+				&:after {
+					content: '';
+					position: absolute;
+					width: 4rem;
+					height: 1px;
+					background: $white;
+					bottom: -1.6rem;
+					bottom: -3vh;
+					left: 50%;
+					margin-left: -2rem;
+				}
+			}
 		}
 		
 		&.icons {
+			background: $yellow;
+			
 			h2 {
 				font-family: $pn_cond;
 				font-size: 9vh;
 				line-height: 7vh;
+				color: $charcoal;
 				
 				span {
-					font-size: 30%;
+					font-size: 36%;
 					line-height: 2;
 					
 					&:last-child {
-						line-height: 1;
+						line-height: 1.1;
+						color: $charcoal;
+						font-family: $pn_cond;
+						text-transform: uppercase;
+						font-size: 56%;
 					}
 				}
 			}
@@ -405,6 +431,17 @@ img {
 				text-align: center;
 				text-transform: uppercase;
 				margin: 5px 0 0 0;
+				color: $charcoal;
+				line-height: 0.9;
+				
+				span {
+					display: block;
+					color: $white;
+					font-family: $sans-serif;
+					font-weight: 100;
+					font-size: 70%;
+					text-transform: none;
+				}
 			}
 			
 			.stats {
@@ -458,8 +495,9 @@ img {
 			
 			p {
 				text-align: center;
-				width: 90%;
+				width: 60%;
 				margin-bottom: 6vh;
+				font-weight: 100;
 			}
 			
 			.logo {
@@ -471,6 +509,8 @@ img {
 			}
 			
 			&:last-child {
+				border-top: 4px solid $yellow;
+				
 				&:before {
 					content: '';
 					position: absolute;
@@ -479,7 +519,7 @@ img {
 					bottom: 0;
 					right: 0;
 					background: url(../images/honey-angle.png) no-repeat right bottom;
-    				background-size: 22%;
+    				background-size: 260px;
 				}
 			}
 		}
@@ -497,10 +537,10 @@ img {
 			position: relative;
 			font-size: 2rem;
 			margin: 1.5rem;
+			line-height: 0.8;
 
 			span {
 				display: block;
-				line-height: 0.5;
 				font-family: $pn_cond;
 				font-weight: 600;
 				letter-spacing: -1px;
@@ -512,7 +552,7 @@ img {
 				width: 4rem;
 				height: 1px;
 				background: $yellow;
-				bottom: -8px;
+				bottom: -1rem;
 				left: 0;
 			}
 		}
@@ -522,20 +562,22 @@ img {
 			font-weight: 600;
 			font-size: 10vh;
 			margin: 0;
+			line-height: 0.8;
 			
 			span {
 				font-size: 30%;
 				font-family: $sans-serif;
 				font-weight: 100;
-				color: $yellow;
 				display: block;
+				line-height: 1;
 			}
 		}
 	}
 	
 	&.creativity-1 {
 		.photo-panel {
-			background-image: url(../images/gatwick-airport-01.jpg);
+			background-image: url(../images/Gatwick_Spreads_210x297mm.jpg);
+//			background-image: url(../images/gatwick-airport-01.jpg);
 		}
 	}
 	
@@ -553,7 +595,7 @@ img {
 	
 	&.commerciality-2 {
 		.photo-panel {
-			background-image: url(../images/mencap-01.jpg);
+			background-image: url(../images/Mencap-bubbles.gif);
 		}
 	}
 	
@@ -565,13 +607,13 @@ img {
 	
 	&.coherence-2 {
 		.photo-panel {
-			background-image: url(../images/royal-london-01.jpg);
+			background-image: url(../images/2258SHEL_BE_Icons_2.gif);
 		}
 	}
 	
 	&.connectivity-1 {
 		.photo-panel {
-			background-image: url(../images/serco-01.jpg);
+			background-image: url(../images/confidential_information4.gif);
 		}
 	}
 	
@@ -594,6 +636,40 @@ img {
 		width: 100%;
 		text-align: center;
 		margin: 3vh 0;
+	}
+	
+	&.logos {
+		li {
+			position: relative;
+			
+			&:after {
+				content: '';
+				position: relative;
+				width: 8rem;
+				height: 2px;
+				background: #f7c400;
+				margin: 2rem auto 0;
+				display: block;
+			}
+			
+			img {
+				display: inline;
+				width: 7rem;
+				margin-top: .75rem;
+			}
+			
+			&:last-child {
+				img {
+					width: 4rem;
+				}
+				
+				@media only screen and (max-width: 768px) {
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -634,7 +710,7 @@ img {
 			width: 4rem;
 			height: 1px;
 			background: $yellow;
-			bottom: -2px;
+			bottom: -0.3rem;
 			left: 0;
 		}
 	}
@@ -719,7 +795,7 @@ nav {
 	p {
 		max-width: 510px;
 		color: $charcoal;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		font-weight: 100;
 		margin-bottom: 1.5rem;
 	}

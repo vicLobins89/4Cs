@@ -24,10 +24,10 @@ html {
 		h2 {
 			font-size: 8rem;
 			font-size: 13vh;
-			margin-bottom: 11vh;
+			margin-bottom: 8vh;
 			
 			&:after {
-				bottom: -6vh;
+				bottom: -5vh;
 			}
 		}
 		
@@ -38,13 +38,18 @@ html {
 		}
 		
 		.icon {
-			margin: 6vh auto;
+			margin: 6vh auto 4vh;
 		}
 		
 		&.more {
 			h2 {
 				font-size: 27vh;
 				line-height: 13vh;
+			}
+			
+			&.icons h2 {
+				position: relative;
+				margin-bottom: 8vh;
 			}
 		}
 		
@@ -53,23 +58,11 @@ html {
 				font-size: 14vh;
 				line-height: 9vh;
 			}
-			
-			.stats {
-				li {
-					width: 25%;
-				}
-			}
 		}
 		
 		&.footer {
 			p {
-				width: 60%;
-			}
-			
-			&:last-child {
-				&:before {
-    				background-size: 8%;
-				}
+				width: 40%;
 			}
 		}
 	}
@@ -94,7 +87,15 @@ html {
 .stats {
 	li {
 		width: 50%;
-		margin: 7vh 0;
+		margin: 0 0 7vh;
+	}
+	
+	&.logos {
+		margin-top: 9vh;
+		
+		li img {
+			width: 10rem;
+		}
 	}
 }
 
@@ -113,6 +114,7 @@ html {
 		&:after {
 			width: 8rem;
 			height: 2px;
+			bottom: -0.5rem;
 		}
 	}
 }
@@ -126,5 +128,10 @@ html {
 	
 	p {
 		font-size: 1.2rem;
+	}
+	
+	.connectivity-2 &, .commerciality-1 &, .coherence-2 & {
+		left: auto;
+		right: 3rem;
 	}
 }
