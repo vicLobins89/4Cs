@@ -1218,6 +1218,9 @@ img {
   height: auto;
   pointer-events: none; }
 
+#pt-main {
+  overflow: hidden; }
+
 .fixed-fix {
   position: fixed;
   top: -1px;
@@ -1247,6 +1250,9 @@ img {
   bottom: 3rem;
   margin-left: -10px;
   z-index: 10; }
+  .arrow-down:before {
+    content: 'Scroll';
+    margin-left: -10px; }
 
 @-webkit-keyframes pulse-down {
   0% {
@@ -1480,8 +1486,30 @@ img {
       padding: 0 3%; }
       .pt-page.title-card.icons .stats li {
         width: 50%; }
-        .pt-page.title-card.icons .stats li img {
-          padding: 0 22% 10px; }
+        .pt-page.title-card.icons .stats li .icon-alt {
+          padding: 0 22% 10px;
+          position: relative;
+          opacity: 0;
+          right: -20px;
+          transform: rotate(45deg);
+          -webkit-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out; }
+          .pt-page.title-card.icons .stats li .icon-alt.in-view {
+            opacity: 1;
+            right: 0;
+            transform: rotate(0deg) !important; }
+        .pt-page.title-card.icons .stats li:nth-child(2) .icon-alt {
+          -webkit-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+          transform: rotate(50deg); }
+        .pt-page.title-card.icons .stats li:nth-child(3) .icon-alt {
+          -webkit-transition: all 1.4s ease-in-out;
+          transition: all 1.4s ease-in-out;
+          transform: rotate(55deg); }
+        .pt-page.title-card.icons .stats li:nth-child(4) .icon-alt {
+          -webkit-transition: all 1.8s ease-in-out;
+          transition: all 1.8s ease-in-out;
+          transform: rotate(60deg); }
   .pt-page.title-card.footer {
     padding-top: 11vh; }
     .pt-page.title-card.footer h2 {
@@ -1572,12 +1600,16 @@ img {
     background-image: url(../images/harrods-01.jpg); }
   .pt-page.commerciality-2 .photo-panel {
     background-image: url(../images/Mencap-bubbles.gif); }
+    .pt-page.commerciality-2 .photo-panel h2 {
+      color: #3c3c3b; }
   .pt-page.coherence-1 .photo-panel {
     background-image: url(../images/tesco-finest-01.jpg); }
   .pt-page.coherence-2 .photo-panel {
-    background-image: url(../images/2258SHEL_BE_Icons_2.gif); }
+    background-image: url(../images/2258SHEL_BE_Icons_2_Square.gif); }
   .pt-page.connectivity-1 .photo-panel {
-    background-image: url(../images/confidential_information4.gif); }
+    background-image: url(../images/Serco_NHS.jpg); }
+    .pt-page.connectivity-1 .photo-panel h2 {
+      color: #3c3c3b; }
   .pt-page.connectivity-2 .photo-panel {
     background-image: url(../images/southeastern-01.jpg);
     background-position: left center; }
@@ -1689,7 +1721,8 @@ nav {
     font-family: "proxima-nova-extra-condensed", "proxima-nova", "Helvetica Neue", Helvetica, Arial, "sans-serif";
     letter-spacing: -1px;
     font-size: 2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    text-transform: uppercase; }
     .yellow-box h3 span {
       display: block;
       color: #fff;
@@ -1697,7 +1730,8 @@ nav {
       font-size: 70%;
       font-weight: 600;
       letter-spacing: 0;
-      line-height: 1; }
+      line-height: 1;
+      text-transform: none; }
     .yellow-box h3:before {
       content: '';
       position: absolute;
@@ -1802,6 +1836,8 @@ TABLET & SMALLER LAPTOPS
   .pt-page.title-card.more h2 {
     font-size: 27vh;
     line-height: 13vh; }
+    .pt-page.title-card.more h2:after {
+      bottom: -3vh; }
   .pt-page.title-card.more.icons h2 {
     position: relative;
     margin-bottom: 8vh; }
@@ -1826,6 +1862,8 @@ TABLET & SMALLER LAPTOPS
     margin-top: 9vh; }
     .stats.logos li img {
       width: 10rem; }
+    .stats.logos li:nth-child(1) img, .stats.logos li:nth-child(3) img, .stats.logos li:nth-child(4) img {
+      margin-top: 1.5rem; }
 
   .photo-panel {
     height: 100%;
@@ -1886,10 +1924,11 @@ DESKTOP
     background-size: 25%; }
   .pt-page.coherence-2 .photo-panel {
     background-color: #00398e;
-    background-position: 200% center; }
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat; }
   .pt-page.commerciality-2 .photo-panel {
-    background-color: #c6c6c7;
-    background-position: -100% center; }
+    background-image: url(../images/Mencap-bubbles_alt.gif); }
 
   /*********************
   HEADER STYLES

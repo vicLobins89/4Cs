@@ -22,7 +22,7 @@ $(document).ready(function(){
 	}
 	
 	var $window = $(window),
-		$animation_elements = $('.icon, .title-card .text'),
+		$animation_elements = $('.icon, .title-card .text, .icon-alt'),
 		$photo = $('.photo-panel');
 	
 	if( !$('body').hasClass('ios-chrome') ) {

@@ -45,6 +45,10 @@ html {
 			h2 {
 				font-size: 27vh;
 				line-height: 13vh;
+				
+				&:after {
+					bottom: -3vh;
+				}
 			}
 			
 			&.icons h2 {
@@ -93,8 +97,16 @@ html {
 	&.logos {
 		margin-top: 9vh;
 		
-		li img {
-			width: 10rem;
+		li {
+			img {
+				width: 10rem;
+			}
+			
+			&:nth-child(1), &:nth-child(3), &:nth-child(4) {
+				img {
+					margin-top: 1.5rem;
+				}
+			}
 		}
 	}
 }

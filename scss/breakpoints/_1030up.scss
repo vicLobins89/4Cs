@@ -52,12 +52,13 @@ body {
 	
 	&.coherence-2 .photo-panel {
 		background-color: #00398e;
-		background-position: 200% center;
+		background-position: left center;
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	
 	&.commerciality-2 .photo-panel {
-		background-color: #c6c6c7;
-		background-position: -100% center;
+		background-image: url(../images/Mencap-bubbles_alt.gif);
 	}
 }
 

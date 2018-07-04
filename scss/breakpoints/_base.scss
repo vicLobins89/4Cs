@@ -130,6 +130,10 @@ img {
 	pointer-events: none;
 }
 
+#pt-main {
+	overflow: hidden;
+}
+
 .fixed-fix {
     position:fixed;
     top:-1px; 
@@ -163,6 +167,11 @@ img {
 	margin-left: -10px;
 	z-index: 10;
 //	@include prefix(animation, pulse-down 1.5s infinite, webkit moz o);
+	
+	&:before {
+		content: 'Scroll';
+		margin-left: -10px;
+	}
 }
 @-webkit-keyframes pulse-down {
 	0% { bottom: 3rem; }
@@ -450,8 +459,34 @@ img {
 				li {
 					width: 50%;
 					
-					img {
+					.icon-alt {
 						padding: 0 22% 10px;
+						position: relative;
+						opacity: 0;
+						right: -20px;
+						transform: rotate(45deg);
+						@include transition(all 0.6s ease-in-out);
+						
+						&.in-view {
+							opacity: 1;
+							right: 0;
+							transform: rotate(0deg) !important;
+						}
+					}
+					
+					&:nth-child(2) .icon-alt {
+						@include transition(all 1s ease-in-out);
+						transform: rotate(50deg);
+					}
+					
+					&:nth-child(3) .icon-alt {
+						@include transition(all 1.4s ease-in-out);
+						transform: rotate(55deg);
+					}
+					
+					&:nth-child(4) .icon-alt {
+						@include transition(all 1.8s ease-in-out);
+						transform: rotate(60deg);
 					}
 				}
 			}
@@ -596,6 +631,10 @@ img {
 	&.commerciality-2 {
 		.photo-panel {
 			background-image: url(../images/Mencap-bubbles.gif);
+			
+			h2 {
+				color: $charcoal;
+			}
 		}
 	}
 	
@@ -607,13 +646,17 @@ img {
 	
 	&.coherence-2 {
 		.photo-panel {
-			background-image: url(../images/2258SHEL_BE_Icons_2.gif);
+			background-image: url(../images/2258SHEL_BE_Icons_2_Square.gif);
 		}
 	}
 	
 	&.connectivity-1 {
 		.photo-panel {
-			background-image: url(../images/confidential_information4.gif);
+			background-image: url(../images/Serco_NHS.jpg);
+			
+			h2 {
+				color: $charcoal;
+			}
 		}
 	}
 	
@@ -770,6 +813,7 @@ nav {
 		letter-spacing: -1px;
 		font-size: 2rem;
 		margin-bottom: 2rem;
+		text-transform: uppercase;
 		
 		span {
 			display: block;
@@ -779,6 +823,7 @@ nav {
 			font-weight: 600;
 			letter-spacing: 0;
 			line-height: 1;
+			text-transform: none;
 		}
 		
 		&:before {
